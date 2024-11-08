@@ -69,6 +69,7 @@ public class Ex2 {
                 .forEach(System.out::println);
     }
 
+    // pass the class/interface so i do not need to use reflection 
     private static <T extends CreateFromCSV<T>> List<T> createDataFromCSV(String filePath, CreateFromCSV<T> clazz) {
         String line;
         // could be placed at the method params to be adjusted
