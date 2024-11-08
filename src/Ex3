@@ -1,0 +1,38 @@
+What is a singleton pattern and when do you use it? Please use an example.
+    The Singleton is a design pattern that guarantees a class has only one instance.
+    If you try to create a new instance, you will receive the same existing instance.
+
+    It is used when you don’t need multiple instances of an object, and also to minimize resource usage.
+    Additionally, if the class requires a lot of processing to be created,
+     this pattern can help by ensuring that only one instance is created, improving performance and efficiency.
+
+However, the Singleton pattern can pose challenges in multi-threaded environments.
+ Since only one instance is shared across the application, concurrent access by multiple threads can lead to problems
+  such as data inconsistency or resource contention.
+
+     Example:
+Loggin system, Database Connection Poll, Config Class
+When not use:
+    Testing (sharing resources can change the tests output),
+    Concurrency
+
+
+    ____________=============____________
+
+    What is a dependency injection and when do you use it? Please use an example.
+
+Dependency Injection is a software design pattern in which a class does not create its own dependencies;
+instead, the dependencies are provided (injected) into the class.
+
+Example: Suppose you have a Service class that requires a Database class.
+Instead of creating the Database class inside the Service, you pass the Database interface to the Service class.
+This approach allows you to inject the necessary dependencies instead of having the class create them itself.
+
+This pattern guarantees decoupling of dependencies, facilitates testing,
+increases flexibility (you can change the database without modifying the service class), and simplifies object creation.
+
+When to use?
+Testing: When you need to make testing easier, as you can inject mock dependencies instead of real ones.
+Decoupling: When you want to decouple your code and reduce tight coupling between components.
+Large Applications: When you have a large application, Dependency Injection can help simplify and manage
+ the relationships between components.
